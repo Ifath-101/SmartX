@@ -236,6 +236,30 @@ const fetchUser = async (req,res,next) =>{
     }
 }
 
+// Search route for products
+app.get('/search', async (req, res) => {
+    const query = req.query.q;
+
+    if (!query) {
+        return res.status(400).json({ success: false, error: "No search query provided" });
+    }
+
+    try {
+        const results = await Product.find({
+            name: { $regex: query, $options: 'i' } // case-insensitive search
+        });
+
+        res.json({
+            success: true,
+            results
+        });
+    } catch (error) {
+        console.error("Search error:", error);
+        res.status(500).json({ success: false, error: "Server error" });
+    }
+});
+
+
 //Creating endpoint for adding products in cartdata
 app.post('/addtocart',fetchUser,async (req,res)=>{
     console.log("Added",req.body.itemId);
@@ -246,7 +270,7 @@ app.post('/addtocart',fetchUser,async (req,res)=>{
 })
 
 // creating endpoint to remove product from cartdata
-app.post('.removefromcart',fetchUser,async (req,res)=>{
+app.post('/removefromcart',fetchUser,async (req,res)=>{
     console.log("Removed",req.body.itemId);
     let userData = await Users.findOne({_id:req.user.id});
     if(userData.cartData[req.body.itemId]>0)

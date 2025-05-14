@@ -30,9 +30,23 @@ const Productdisplay = (props) => {
                     <img src={star_dull_icon} alt=""/>
                     <p>(122)</p>
                 </div>
-                        <div className="productdisplay-price">${product.price}</div>
-                        <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+                <div className="productdisplay-price">${product.price}</div>
+                <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+                <button className="buy-now-btn">BUY NOW</button>
+
+                <div className="productdisplay-details">
+                    <p><strong>Brand:</strong> {product.brand}</p>
+                    <p><strong>RAM:</strong> {product.ram}</p>
+                    <p><strong>Storage:</strong> {product.storage}</p>
+                    <p><strong>Front Camera:</strong> {product.fcam}</p>
+                    <p><strong>Rear Camera:</strong> {product.rcam}</p>
+                    <p><strong>Display:</strong> {product.display}</p>
+                    <p><strong>Battery:</strong> {product.battery}</p>
+                </div>
+          
             </div>
+
+
         </div>
     )
 }

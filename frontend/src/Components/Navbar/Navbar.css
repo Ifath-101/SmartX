@@ -123,6 +123,30 @@
     display: none;
 }
 
+/* ✅ ADDED FOR SEARCH */
+.nav-search-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.nav-search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.nav-search-button {
+  padding: 6px 10px;
+  background-color: #392ddca6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 1280px) {
     .navbar {

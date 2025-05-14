@@ -2,12 +2,14 @@ import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
-import { Link } from "react-router-dom";
 // import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/dropdown_icon.png";
+import { Link, useNavigate } from "react-router-dom";//✅ ADDED FOR SEARCH
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const [search, setSearch] = useState(""); // ✅ ADDED FOR SEARCH
+  const navigate = useNavigate(); // ✅ ADDED FOR SEARCH
   // const { getTotalCartItems } = useContext(ShopContext);
   const menuRef = useRef();
 
@@ -18,6 +20,15 @@ const Navbar = () => {
 
   const resetMenu = () => {
     setMenu("");
+  };
+
+  // ✅ ADDED FOR SEARCH
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (search.trim() !== "") {
+      navigate(`/search?q=${search}`);
+      setSearch(""); // Optional: Clear search field after navigating
+    }
   };
 
   return (
@@ -94,6 +105,19 @@ const Navbar = () => {
           {menu === "vivo" ? <hr /> : <></>}
         </li>
       </ul>
+
+      {/* ✅ ADDED FOR SEARCH */}
+      <form onSubmit={handleSearchSubmit} className="nav-search-form">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="nav-search-input"
+        />
+        <button type="submit" className="nav-search-button">Search</button>
+      </form>
+      
       <div className="nav-login-cart">
         {localStorage.getItem("auth-token") ? (
           <button
