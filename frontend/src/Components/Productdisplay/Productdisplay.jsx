@@ -31,8 +31,10 @@ const Productdisplay = (props) => {
                     <p>(122)</p>
                 </div>
                 <div className="productdisplay-price">${product.price}</div>
-                <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
-                <button className="buy-now-btn">BUY NOW</button>
+                <div className="buttons">
+                    <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+                    <button className="buy-now-btn">BUY NOW</button>
+                </div>
 
                 <div className="productdisplay-details">
                     <p><strong>Brand:</strong> {product.brand}</p>

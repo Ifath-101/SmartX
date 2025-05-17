@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 250px;
     height: 100vh;
-    background: white;
+    background: linear-gradient(to right, #B8E1F5, #b0eeff, #b1eaf3);
 }
 .sidebar-item{
     display: flex;

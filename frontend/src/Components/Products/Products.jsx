@@ -21,9 +21,6 @@ const Products = () => {
                 })}
             </div>
         </div>
-        <div className='loadmore'>
-            Explore More
-        </div>
     </div>
     )
 }

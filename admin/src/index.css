@@ -1,6 +1,7 @@
 body{
   margin: 0;
   font-family: "Poppins";
-  background-color: #f6f6f6;
+  /*background-color: #f6f6f6;*/
+  background: linear-gradient(to right, #B8E1F5, #EDFBFF, #E0FBFF);
   height: 100vh;
 }

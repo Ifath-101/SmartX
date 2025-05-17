@@ -54,24 +54,16 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 .productdisplay-right button:hover {
-    background-color: #56047f;
-}
-.buy-now-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #6384e6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    background-color: #000e4e;
 }
 
-.buy-now-btn:hover {
-    background-color: #56047f;
+.buttons{
+    display: flex;
+    gap: 10px;
 }
 
 @media(max-width:1280px){

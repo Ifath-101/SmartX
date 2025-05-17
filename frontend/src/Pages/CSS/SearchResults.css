@@ -1,6 +1,14 @@
 .search-results-wrapper {
   padding-top: 6rem; 
 }
+.search-results-wrapper h2{
+  padding-left: 2rem;
+  font-size: 22px;
+}
+.search-results-wrapper p{
+  font-size: 18px;
+  padding-left: 2rem;
+}
 .search-results-page-container{
   padding: 2rem;
   display: grid;
