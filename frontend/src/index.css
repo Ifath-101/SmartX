@@ -3,5 +3,7 @@
 }
 body {
   font-family: 'poppins';
-  background: linear-gradient(to right, #B8E1F5, #EDFBFF, #E0FBFF);
+  background: linear-gradient(to bottom right, #f0f4f8, #dbeafe); /* soft gradient */
+  color: #111827;
+  overflow-x: hidden;
 }

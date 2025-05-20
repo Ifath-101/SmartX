@@ -4,7 +4,7 @@
     align-items: center;
     gap: 10px;
     height: 90vh;
-    margin-bottom: 400px;
+    margin-bottom: 450px;
     margin-top: -50px;
 }
 .products h1{
@@ -37,9 +37,15 @@
     font-size: 15px;
     font-weight: 500;
 }
+@media(max-width:1204px){
+    .products{
+        margin-bottom: 350px;
+    }
+}
 @media(max-width:1024px){
     .products{
         height: 60vh;
+        margin-bottom: 350px;
     }
     .products h1{
         font-size: 32px;
@@ -84,7 +90,7 @@
 @media(max-width:500px){
     .products{
         height: 90vh;
-        margin-bottom: 120px;
+        margin-bottom: 730px;
     }
     .products-item{
         display: grid;
