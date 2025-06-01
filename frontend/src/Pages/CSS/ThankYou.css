@@ -1,0 +1,71 @@
+.thankyou-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.thankyou-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.thankyou-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.thankyou-card h1 {
+  margin: 0;
+  color: #007bff;
+  font-size: 2rem;
+}
+
+.thankyou-card p {
+  margin-top: 0.5rem;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.thankyou-home-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.thankyou-home-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+  .thankyou-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .thankyou-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .thankyou-card p {
+    font-size: 1rem;
+  }
+
+  .thankyou-home-btn {
+    width: 100%;
+  }
+}

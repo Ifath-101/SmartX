@@ -9,6 +9,8 @@ import Cart from './Pages/Cart'
 import LoginSignup from './Pages/LoginSignup'
 import SearchResults from './Pages/SearchResults'
 import Footer from './Components/Footer/Footer'
+import Payment from './Pages/Payment'
+import ThankYou from './Pages/ThankYou'
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         <Route path="/search" element={<SearchResults />}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
+        <Route path='/payment' element={<Payment/>}/>
+        <Route path='/thankyou' element={<ThankYou/>}/>
        </Routes>
        <Footer/>
       </BrowserRouter>

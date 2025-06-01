@@ -3,6 +3,7 @@ import './Productdisplay.css'
 import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png'
 import { ShopContext } from "../../Context/ShopContext";
+import { Link } from "react-router-dom";
 
 const Productdisplay = (props) => {
     const {product} = props;
@@ -33,7 +34,14 @@ const Productdisplay = (props) => {
                 <div className="productdisplay-price">${product.price}</div>
                 <div className="buttons">
                     <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
-                    <button className="buy-now-btn">BUY NOW</button>
+                    <Link to="/payment" 
+                        state={{ 
+                            price: product.price, 
+                            name: product.name 
+                        }}>
+                        <button className="buy-now-btn">BUY NOW</button>
+                    </Link>
+
                 </div>
 
                 <div className="productdisplay-details">
