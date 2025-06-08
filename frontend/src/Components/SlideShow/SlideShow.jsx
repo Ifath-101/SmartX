@@ -13,11 +13,11 @@ const images = [
   },
   {
     image: Img2,
-    link: "/product/6",
+    link: "/product/35",
   },
   {
     image: Img3,
-    link: "/product/7",
+    link: "/product/39",
   },
 ];
 
